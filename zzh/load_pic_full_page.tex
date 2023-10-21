@@ -1,0 +1,27 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{tikz}
+
+\graphicspath{{e:/temp/down_pic/}}
+
+\newcommand\includeFullPageGraphics[2][]{
+  \newpage
+  \thispagestyle{empty}
+  \begin{tikzpicture}[remember picture, overlay, inner sep=0pt]
+    \node at (current page.center) 
+      {\includegraphics[width=\paperwidth, height=\paperheight, keepaspectratio=false,#1]{#2}};
+  \end{tikzpicture}
+%   \newpage
+}
+
+\begin{document}
+\foreach \I in {1,2,...,6}
+  {\includeFullPageGraphics{\I}}
+% \includeFullPageGraphics{1}
+% \includeFullPageGraphics{2}
+% \includeFullPageGraphics{3}
+% \includeFullPageGraphics{4}
+% \includeFullPageGraphics{5}
+% \includeFullPageGraphics{6}
+\end{document}
+
