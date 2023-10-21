@@ -1,0 +1,26 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage[margin=0cm]{geometry}
+\usepackage{tikz}
+
+\graphicspath{{e:/temp/down_pic/}}
+
+\begin{document}
+
+\thispagestyle{empty}
+
+\foreach \I in {1,2,...,6}
+{
+  \begin{figure}[p]
+    \centering
+    \includegraphics[width=\paperwidth,height=\paperheight,
+    keepaspectratio]{\I}
+  \end{figure}
+}
+
+% \begin{figure}[p]
+%   \centering
+%   \includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{2}
+% \end{figure}
+
+\end{document}
