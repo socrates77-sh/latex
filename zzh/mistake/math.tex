@@ -1,0 +1,38 @@
+\documentclass[fontset=windows]{ctexart}
+\usepackage[a4paper,margin=1in,headheight=13pt]{geometry} 
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+
+\newcommand{\mytitle}{数学错题集1}
+\newcommand{\mydate}{2023/10/23}
+
+\setmainfont{Times New Roman}
+\setCJKmainfont[ItalicFont={FangSong},BoldFont={DengXian}]{KaiTi}
+\setCJKsansfont{SimHei}
+\setCJKmonofont{FangSong}
+
+\pagestyle{fancy}
+\fancyhead[C]{\textbf{\mytitle}}
+\fancyhead[R]{\mydate}
+\fancyfoot[C]{\pageref{LastPage}\slash\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\begin{document}
+
+错题集
+{\textbf 错题集}
+{\itshape 错题集}
+{\heiti 错题集}
+
+abcd
+
+ABCDE
+
+1234
+
+
+\label{LastPage}
+
+\end{document}
+
