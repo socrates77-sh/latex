@@ -1,0 +1,33 @@
+\ProvidesPackage{mypack}
+\RequirePackage{ctex}
+\RequirePackage{fancyhdr}
+% \newcommand{\tnss}{The not so Short Introduction
+% to \LaTeXe}
+% \newcommand{\txsit}[1]{The \emph{#1} Short
+% Introduction to \LaTeXe}
+% % \newenvironment{king}{\begin{quote}}{\end{quote}}
+% \newenvironment{king}
+% {\rule{1ex}{1ex}%
+% \hspace{\stretch{1}}}
+% {\hspace{\stretch{1}}%
+% \rule{1ex}{1ex}}
+
+\newcommand{\MyInit}[3]
+{
+    % \setmainfont{Times New Roman}
+    \setCJKmainfont[ItalicFont={FangSong},BoldFont={DengXian}]{KaiTi}
+    \setCJKsansfont{SimHei}
+    \setCJKmonofont{FangSong}
+
+    \pagestyle{fancy}
+    \fancyhead[C]{#1}
+    \fancyhead[R]{#2}
+    \fancyfoot[C]{\pageref{#3}\slash\thepage}
+    \renewcommand{\headrulewidth}{0.4pt}
+    \renewcommand{\footrulewidth}{0.4pt}
+
+    \setlength{\parindent}{0pt}
+}
+
+\endinput
+

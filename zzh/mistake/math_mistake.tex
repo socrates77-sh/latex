@@ -1,0 +1,37 @@
+\documentclass{ctexart}
+\usepackage[a4paper,margin=1in,headheight=13pt]{geometry} 
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{amsmath}
+\usepackage{ifthen}
+
+\usepackage{mypack}
+
+\newcommand{\myTitle}{数学错题集1}
+\newcommand{\myDate}{2023/10/23}
+
+% 是否打印答案, fill/blank
+\newcommand{\fORb}{b}
+
+\newcommand{\FillBlank}[2]
+{
+    \ifthenelse{\equal{\fORb}{f}}
+        {\uline{ {\color{gray}#1} #2 }}
+        {\uline{\hspace{1.5cm}}}
+}
+
+\MyInit{\myTitle}{\myDate}{LastPage}
+
+\begin{document}
+
+    %填空题
+    [23102301]\quad 
+    $\dfrac{1}{6}$和$\dfrac{7}{20}$的最小公分母是\FillBlank{120}{60}。 \par
+    [23102301]\quad 
+    $\dfrac{1}{6}$和$\dfrac{7}{20}$的最小公分母是\FillBlank{120}{60}。 \par
+
+
+    \label{LastPage}
+\end{document}
+
