@@ -12,7 +12,7 @@
 % {\hspace{\stretch{1}}%
 % \rule{1ex}{1ex}}
 
-\newcommand{\MyInit}[3]
+\newcommand{\MyInit}[2]
 {
     % \setmainfont{Times New Roman}
     \setCJKmainfont[ItalicFont={FangSong},BoldFont={DengXian}]{KaiTi}
@@ -20,13 +20,48 @@
     \setCJKmonofont{FangSong}
 
     \pagestyle{fancy}
-    \fancyhead[C]{#1}
+    \fancyhead[C]{\Large{#1}}
     \fancyhead[R]{#2}
-    \fancyfoot[C]{\pageref{#3}\slash\thepage}
+    % \fancyfoot[C]{\thepage\slash\pageref{#3}}
+    \fancyfoot[C]{--\quad\thepage \quad--}
     \renewcommand{\headrulewidth}{0.4pt}
     \renewcommand{\footrulewidth}{0.4pt}
 
+    \setlength{\headheight}{15pt}
+    \setlength{\headsep}{10pt}
+    \setlength{\footskip}{10pt}
     \setlength{\parindent}{0pt}
+    \setlength{\parskip}{10pt}
+}
+
+\newcommand{\FillBlank}[2]
+{
+    \ifthenelse{\equal{\fORb}{f}}
+    {\uline{ {\color{gray}#1 } \textbf{#2 }}}
+    {\uline{\hspace{1.5cm}}}
+}
+
+\newcommand{\FillBlankB}[2]
+{
+    \ifthenelse{\equal{\fORb}{f}}
+        {({\color{gray}#1 } {\boldmath{#2 }})}
+        {({\hspace{1cm}})}
+}
+
+\newcommand{\AnswerBox}[3]
+{
+    \ifthenelse{\equal{\fORb}{f}}
+    {
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=#2\textwidth,keepaspectratio]{#1}
+        \end{figure}
+    }
+    {
+        \setlength{\parskip}{#3 pt}
+        \quad \par
+        \setlength{\parskip}{10pt} 
+    }
 }
 
 \endinput

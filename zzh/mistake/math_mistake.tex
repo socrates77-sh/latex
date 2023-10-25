@@ -1,37 +1,43 @@
 \documentclass{ctexart}
-\usepackage[a4paper,margin=1in,headheight=13pt]{geometry} 
+\usepackage[a4paper,margin=1in]{geometry} 
 \usepackage{xcolor}
 \usepackage{fancyhdr}
-\usepackage{lastpage}
+% \usepackage{lastpage}
 \usepackage{amsmath}
 \usepackage{ifthen}
+\usepackage{graphicx}
+\usepackage{float}
 
 \usepackage{mypack}
 
 \newcommand{\myTitle}{数学错题集1}
 \newcommand{\myDate}{2023/10/23}
 
-% 是否打印答案, fill/blank
+% 是否打印答案， fill/blank
 \newcommand{\fORb}{b}
 
-\newcommand{\FillBlank}[2]
-{
-    \ifthenelse{\equal{\fORb}{f}}
-        {\uline{ {\color{gray}#1} #2 }}
-        {\uline{\hspace{1.5cm}}}
-}
+\MyInit{\myTitle}{\myDate}
+\graphicspath{{math/}}
 
-\MyInit{\myTitle}{\myDate}{LastPage}
 
 \begin{document}
 
-    %填空题
-    [23102301]\quad 
-    $\dfrac{1}{6}$和$\dfrac{7}{20}$的最小公分母是\FillBlank{120}{60}。 \par
-    [23102301]\quad 
-    $\dfrac{1}{6}$和$\dfrac{7}{20}$的最小公分母是\FillBlank{120}{60}。 \par
+    \input{math/ma3102301}
+    \input{math/mb3102302}
+    \input{math/mc3102303}
+    \input{math/md3102304}
+    \input{math/me3102305}
+    \input{math/me3102305}
+    \input{math/me3102305}
+    \input{math/ma3102301}
+    \input{math/me3102305}
+    \input{math/me3102305}
+    \input{math/me3102305}
+    \input{math/me3102305}
 
-
-    \label{LastPage}
+    \input{math/mc3102303}
+    \input{math/mc3102303}
+    
+    % \label{LastPage}
 \end{document}
 
