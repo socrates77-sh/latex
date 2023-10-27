@@ -1,5 +1,5 @@
 \documentclass{ctexart}
-\usepackage[a4paper,margin=1in]{geometry} 
+\usepackage[a4paper]{geometry} 
 \usepackage{xcolor}
 \usepackage{fancyhdr}
 % \usepackage{lastpage}
@@ -7,14 +7,16 @@
 \usepackage{ifthen}
 \usepackage{graphicx}
 \usepackage{float}
+\usepackage{multirow}
+\usepackage{booktabs}
 
 \usepackage{mypack}
 
-\newcommand{\myTitle}{数学错题集1}
-\newcommand{\myDate}{2023/10/23}
+\newcommand{\myTitle}{数学错题集001}
+\newcommand{\myDate}{2023/10/27}
 
 % 是否打印答案， fill/blank
-\newcommand{\fORb}{b}
+\newcommand{\fORb}{}
 
 \MyInit{\myTitle}{\myDate}
 \graphicspath{{math/}}
@@ -22,22 +24,8 @@
 
 \begin{document}
 
-    \input{math/ma3102301}
-    \input{math/mb3102302}
-    \input{math/mc3102303}
-    \input{math/md3102304}
-    \input{math/me3102305}
-    \input{math/me3102305}
-    \input{math/me3102305}
-    \input{math/ma3102301}
-    \input{math/me3102305}
-    \input{math/me3102305}
-    \input{math/me3102305}
-    \input{math/me3102305}
+    \input{math_vol001}
 
-    \input{math/mc3102303}
-    \input{math/mc3102303}
-    
     % \label{LastPage}
 \end{document}
 
